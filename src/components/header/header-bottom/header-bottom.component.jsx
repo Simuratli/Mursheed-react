@@ -1,18 +1,18 @@
 import React from 'react';
 import './header-bottom.styles.scss'
-
+import { Link } from "react-router-dom";
 const HeaderBottom = () => {
     return (
     <div className="bottomNav">
         <div className="container">
             <div className="navcontainer">
-                <a className="bottomnav_item active" href="/#">Ana səhifə</a>
-                <a className="bottomnav_item " href="/about.html">Haqqımızda</a>
-                <a className="bottomnav_item " href="/guide_and_drivers.html">Sürücülər & Bələdçilər</a>
-                <a className="bottomnav_item " href="/accomadation.html">Məskən</a>
-                <a className="bottomnav_item " href="/flight.html">Uçuş Rezervasiyası</a>
-                <a className="bottomnav_item " href="/attractive_locations.html">Cəlbedici Yerlər</a>
-                <a className="bottomnav_item " href="/offers.html">Təkliflər</a>
+                <Link className="bottomnav_item active" to="/">Ana səhifə</Link>
+                <Link className="bottomnav_item " to="/about">Haqqımızda</Link>
+                <Link className="bottomnav_item " to="/guide_and_drivers">Sürücülər & Bələdçilər</Link>
+                <Link className="bottomnav_item " to="/accomadation">Məskən</Link>
+                <Link className="bottomnav_item " to="/flight">Uçuş Rezervasiyası</Link>
+                <Link className="bottomnav_item " to="/attractive_locations">Cəlbedici Yerlər</Link>
+                <Link className="bottomnav_item " to="/offers">Təkliflər</Link>
             </div>
         </div>
     </div>

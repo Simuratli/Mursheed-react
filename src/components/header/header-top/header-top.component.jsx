@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-
+import { Link } from "react-router-dom";
 import './header-top.styles.scss';
 
 const HeaderTop = () => {
@@ -38,13 +38,13 @@ const HeaderTop = () => {
                 </div>
                 <div className="secondcontainer">
                     <div className="support">
-                        <a className="supportItem" href="/support">Dəstək</a>
-                        <a className="supportItem" href="/contact">Bizimlə Əlaqə</a>
+                        <Link className="supportItem" to="/support">Dəstək</Link>
+                        <Link className="supportItem" to="/contact">Bizimlə Əlaqə</Link>
                     </div>
                     <div id="dropLogBtn" onClick={openButtons} className="profile" >
                         <div id="loggedid" className={toggle.active ? 'open': null} >
-                            <a className="loggediditem" href="/#">Daxil ol</a>
-                            <a className="loggediditem" href="/register_chosing">Qeydiyyat</a>
+                            <Link className="loggediditem" to="/">Daxil ol</Link>
+                            <Link className="loggediditem" to="/register_chosing">Qeydiyyat</Link>
                         </div>
                     </div>
                 </div>

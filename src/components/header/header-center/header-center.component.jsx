@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './header-center.styles.scss'
-
+import { Link } from "react-router-dom";
 import Logo from '../../../img/header/logo.svg';
 
 
@@ -20,9 +20,9 @@ const HeaderCenter = () =>{
         <div className="centerNav">
         <div className="container">
             <div className="logo">
-                <a href="/">
+                <Link to='/'>
                     <img src={Logo} alt="mursheed logo" />
-                </a>
+                </Link>
             </div>
             <div className="rightContent">
                 <div className="currency">
@@ -47,8 +47,8 @@ const HeaderCenter = () =>{
                     </form>
                 </div>
                 <div className="loginbuttons">
-                    <a href='/login.html' className=" ">Daxil ol</a>
-                    <a href="/register.html" className=" ">Qeydiyyat</a>
+                    <Link to='/login' className=" ">Daxil ol</Link>
+                    <Link to="/register" className=" ">Qeydiyyat</Link>
                 </div>
                 <div id="hamburger" onClick={toggleNav} className="barIcon">
                     <p className="line"></p>
@@ -58,15 +58,15 @@ const HeaderCenter = () =>{
             </div>
                 <div id="openmenu" className={`${toggle.active ? 'activemenu': ''} container menucontainer`} >
                     <div className="openmenu">
-                        <a className="openmenu_item" href="/#">Ana səhifə</a>
-                        <a className="openmenu_item" href="/about.html"> Haqqımızda</a>
-                        <a className="openmenu_item" href="/guide_and_drivers.html"> Sürücülər & Bələdçilər</a>
-                        <a className="openmenu_item" href="/accomadation.html"> Məskən</a>
-                        <a className="openmenu_item" href="/flight.html">Uçuş Rezervasiyası</a>
-                        <a className="openmenu_item" href="/attractive_locations.html"> Cəlbedici Yerlər</a>
-                        <a className="openmenu_item" href="/offers.html">  Təkliflər</a>
-                        <a className="openmenu_item" href="/#">Dəstək</a>
-                        <a className="openmenu_item" href="/contact.html">Bizimlə Əlaqə</a>
+                        <Link className="openmenu_item" to="/#">Ana səhifə</Link>
+                        <Link className="openmenu_item" to="/about"> Haqqımızda</Link>
+                        <Link className="openmenu_item" to="/guide_and_drivers"> Sürücülər & Bələdçilər</Link>
+                        <Link className="openmenu_item" to="/accomadation"> Məskən</Link>
+                        <Link className="openmenu_item" to="/flight">Uçuş Rezervasiyası</Link>
+                        <Link className="openmenu_item" to="/attractive_locations"> Cəlbedici Yerlər</Link>
+                        <Link className="openmenu_item" to="/offers">  Təkliflər</Link>
+                        <Link className="openmenu_item" to="/#">Dəstək</Link>
+                        <Link className="openmenu_item" to="/contact">Bizimlə Əlaqə</Link>
                     </div>
                 </div>
                 </div>
